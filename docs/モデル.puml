@@ -7,7 +7,6 @@ package Domain {
     }
 
     class 金額 {
-        - int 金額
         + 金額 加える(金額)
         + 金額 減ずる(金額)
         + 金額 乗ずる(int)
@@ -50,7 +49,6 @@ package Domain {
     }
 
     class 支払い最小単位係数 {
-        - int 係数
     }
         
     enum 支払い区分 {
@@ -60,7 +58,6 @@ package Domain {
     }
 
     class 支払い割合 {
-        - int 割合
     }
 
     class 支払い区分別支払い割合設定 {
@@ -89,7 +86,6 @@ package Domain {
     }
 
     class 参加人数 {
-        - int 人数
     }
 
     class 支払い区分別参加人数 {
