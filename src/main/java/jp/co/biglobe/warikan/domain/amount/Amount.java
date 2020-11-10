@@ -15,6 +15,10 @@ class Amount {
         this.amount(this.amount + other.amount);
     }
 
+    public void subtract(Amount other) {
+        this.amount(this.amount - other.amount);
+    }
+
     public int amount() {
         return this.amount;
     }
