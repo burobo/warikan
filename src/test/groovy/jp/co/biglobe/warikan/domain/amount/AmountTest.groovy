@@ -45,4 +45,21 @@ class AmountTest extends Specification {
         15  | 15 | 1
         -15 | 15 | -1
     }
+
+    def remainderTest() {
+        when:
+        Amount amount1 = new Amount(a)
+        Amount amount2 = amount1.remainder(b)
+
+        then:
+        amount1.amount == a
+        amount2.amount == expected
+
+        where:
+        a   | b  | expected
+        15  | 10 | 5
+        10  | 15 | 10
+        15  | 15 | 0
+        -15 | 15 | 0
+    }
 }
