@@ -7,18 +7,22 @@ class AmountTest extends Specification {
         when:
             Amount amount1 = new Amount(10)
             Amount amount2 = new Amount(15)
-            amount1.add(amount2)
+            Amount amount3 = amount1.add(amount2)
         then:
-            amount1.amount() == 25
+            amount1.amount() == 10
+            amount2.amount() == 15
+            amount3.amount() == 25
     }
 
     def subtractTest() {
         when:
             Amount amount1 = new Amount(a)
             Amount amount2 = new Amount(b)
-            amount1.subtract(amount2)
+            Amount amount3 = amount1.subtract(amount2)
         then:
-            amount1.amount() == expected
+            amount1.amount() == a
+            amount2.amount() == b
+            amount3.amount() == expected
         where:
             a  | b  | expected
             15 | 10 | 5

@@ -11,12 +11,12 @@ class Amount {
         this.amount = amount;
     }
 
-    public void add(Amount other) {
-        this.amount(this.amount + other.amount);
+    public Amount add(Amount other) {
+        return new Amount(this.amount + other.amount);
     }
 
-    public void subtract(Amount other) {
-        this.amount(this.amount - other.amount);
+    public Amount subtract(Amount other) {
+        return new Amount(this.amount - other.amount);
     }
 
     public int amount() {
