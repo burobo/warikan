@@ -19,6 +19,10 @@ class Amount {
         return new Amount(this.amount - other.amount);
     }
 
+    public Amount divide(int by) {
+        return new Amount(this.amount / by);
+    }
+
     public int amount() {
         return this.amount;
     }
