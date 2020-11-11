@@ -23,6 +23,10 @@ class Amount {
         return new Amount(this.amount / by);
     }
 
+    public Amount remainder(int divideBy) {
+        return new Amount(this.amount % divideBy);
+    }
+
     public int amount() {
         return this.amount;
     }
