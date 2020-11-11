@@ -1,15 +1,12 @@
 package jp.co.biglobe.warikan.domain.amount;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+@AllArgsConstructor
 class Amount {
-    private int amount = 0;
-
-    public Amount(int amount) {
-        this.amount(amount);
-    }
-
-    private void amount(int amount) {
-        this.amount = amount;
-    }
+    @Getter
+    private int amount;
 
     public Amount add(Amount other) {
         return new Amount(this.amount + other.amount);
@@ -27,7 +24,4 @@ class Amount {
         return new Amount(this.amount % divideBy);
     }
 
-    public int amount() {
-        return this.amount;
-    }
 }
